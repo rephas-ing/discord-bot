@@ -32,4 +32,4 @@ jobs:
 
         with:
           name: JARs
-          path: build/build/distributions/*.tar
+          path: build/distributions/*.tar
