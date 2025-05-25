@@ -11,9 +11,11 @@ plugins {
 
 	alias(libs.plugins.kordex.docker)
 	alias(libs.plugins.kordex.plugin)
+
+	alias(libs.plugins.licenser)
 }
 
-group = "template"
+group = "ing.rephas.discord.bots.general"
 version = "1.0-SNAPSHOT"
 
 dependencies {
@@ -53,13 +55,21 @@ kordEx {
 		// See https://docs.kordex.dev/data-collection.html
 		dataCollection(DataCollection.Standard)
 
-		mainClass = "template.AppKt"
+		mainClass = "ing.rephas.discord.bots.general.AppKt"
 	}
 
 	i18n {
-		classPackage = "template.i18n"
-		translationBundle = "template.strings"
+		classPackage = "ing.rephas.discord.bots.general.i18n"
+		translationBundle = "rephasing.strings"
 	}
+
+	module("func-phishing")
+	module("func-welcome")
+	module("pluralkit")
+}
+
+license {
+	rule(rootProject.file("HEADER"))
 }
 
 detekt {

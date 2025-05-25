@@ -114,3 +114,6 @@ data/
 
 # Env vars - don't commit this!
 .env
+
+# Other files
+Dockerfile
