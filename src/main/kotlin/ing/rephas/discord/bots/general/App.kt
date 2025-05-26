@@ -12,6 +12,7 @@ import dev.kord.core.behavior.channel.asChannelOf
 import dev.kordex.core.ExtensibleBot
 import dev.kordex.core.checks.hasPermission
 import dev.kordex.core.utils.env
+import dev.kordex.core.utils.envOrNull
 import dev.kordex.modules.func.phishing.DetectionAction
 import dev.kordex.modules.func.phishing.extPhishing
 import dev.kordex.modules.func.welcome.welcomeChannel
@@ -27,7 +28,7 @@ private val TOKEN = env("TOKEN")
 suspend fun main() {
 	val bot = ExtensibleBot(TOKEN) {
 		applicationCommands {
-			defaultGuild(env("TEST_SERVER"))
+			defaultGuild(envOrNull("TEST_SERVER"))
 		}
 
 		extensions {
