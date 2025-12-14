@@ -88,7 +88,7 @@ docker {
 		// Each function (aside from comment/emptyLine) corresponds to a Dockerfile instruction.
 		// See: https://docs.docker.com/reference/dockerfile/
 
-		from("openjdk:21-jdk-slim")
+		from("eclipse-temurin:21-jdk-alpine")
 
 		emptyLine()
 
