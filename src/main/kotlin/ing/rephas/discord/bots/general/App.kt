@@ -17,6 +17,7 @@ import dev.kordex.modules.func.phishing.DetectionAction
 import dev.kordex.modules.func.phishing.extPhishing
 import dev.kordex.modules.func.welcome.welcomeChannel
 import dev.kordex.modules.pluralkit.extPluralKit
+import ing.rephas.discord.bots.general.extensions.PhaseTeamExtension
 import ing.rephas.discord.bots.general.utils.welcome.RephasingWelcomeChannelData
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.last
@@ -32,6 +33,8 @@ suspend fun main() {
 		}
 
 		extensions {
+			add(::PhaseTeamExtension)
+
 			extPhishing {
 				detectionAction = DetectionAction.Kick
 				notifyUser = false
